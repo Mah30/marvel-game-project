@@ -7,6 +7,9 @@
 #game-board{
     width: 800px;
     height: 400px;
+    position: relative;
+    /*overflow: hidden;*/
+    border: 2px solid;
 
 }
 
