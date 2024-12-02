@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game-board{
+    width: 800px;
+    height: 400px;
+
+}
+
+#spiderman{
+    width: 50px;
+    height: 50px;
+}
+
