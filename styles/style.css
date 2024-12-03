@@ -4,17 +4,76 @@
     box-sizing: border-box;
 }
 
-#game-board{
-    width: 800px;
-    height: 400px;
+
+#background-game{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 180vh;
+    max-height: 20%;
+    margin: auto;
+    object-fit: cover;
+    height: 65.9vw;
     position: relative;
-    /*overflow: hidden;*/
-    border: 2px solid;
-
 }
 
-#spiderman{
-    width: 50px;
-    height: 50px;
+#start-button{
+    width: 100px; 
+    height: auto; 
+    position: absolute; 
+    
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    cursor: pointer; 
+    
 }
 
+#fire-man{
+    
+    width: 600px; 
+   
+    position: absolute; 
+    
+    left: 80%; 
+    transform: translate(-50%, -50%); 
+
+    z-index: 10;
+
+h1{
+    font-family: Helvetica, Arial;
+    font-size:1vw;
+    font-weight:400;
+    color: rgb(253, 253, 253);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%; /* Centraliza verticalmente */
+    filter: drop-shadow(0 0 0.75rem black );
+    /*background-color: rgba(0, 0, 0, 0.338);*/
+    height: 65.9vw;
+    padding-top: 100vw; /*Alinhamento/posicionamento do título Start Game*/ 
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    cursor: pointer; /* Torna o mouse em um ponteiro ao passar pela imagem */
+    z-index: 10; /* Mantém o botão acima de outros elementos */ 
+}
+    
+
+
+body{
+    font-size: 50px;
+    color: #fff;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+   
+
+    #main{
+        padding: 5rem;
+        font-family: Helvetica, Arial;
+        font-size: 2vw;
+      
+      }
