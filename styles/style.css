@@ -1,88 +1,72 @@
-@media (max-width: 768px) {
-    #background-game {
-        height: 70vh; /* Reduz a altura em telas menores */
+
+@media (max-width: 1024px) {
+    #game-container {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        height: 500px; /* Reduz a altura em telas menores */
     }
 }
 
+@media (max-width: 768px) {
+    #game-container {
+        width: 100%; /* Usa toda a largura da tela */
+        height: 400px; /* Altura ajustada */
+    }
+}
 
 *{
     margin: 0;
     padding: 0;
+    border: none;
+    outline: none;
+    
     box-sizing: border-box;
 }
 
-
-#background-game{
-    
-    width: 100%;
-    width: 100%; 
-    height: 100vh;
-    border-bottom: 30px solid;
-
-    margin: 0 auto; 
-    overflow: hidden;
-    background-size: cover; 
-    background-position: center; 
+#game-container {
+    width: 90%; 
+    height: 90vh; 
+    max-width: 1100px; 
+    max-height: 600px; 
+    border: 2px solid black; 
+    background-color: lightgray; 
+    margin: 10vh auto; 
+    position: relative; 
+    overflow: hidden; 
+    display: flex; 
+    background-image: url(/img/tela2.jpg);
     background-repeat: no-repeat;
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    z-index: -1;
+    background-size: cover;
+    background-position: center ;
 }
-
-
-#start-button {
-  width: 100px; /* Largura do botão */
-  height: auto; /* Ajusta a altura proporcionalmente */
-  position: absolute; /* Permite posicionar o botão livremente */
-  top:100%; /* Centraliza verticalmente */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
-  border: none; /* Remove a borda padrão */
-  padding: 0; /* Remove qualquer padding adicional */
-  cursor: pointer; /* Mostra o ponteiro ao passar sobre o botão */
-  z-index: 10; /* Garante que o botão fique acima de outros elementos */
+ 
+#endScreen{
+    display: none;
 }
-
-/*button: hover {
-    border: 2px solid green; background: none;
-    color: green;
-    }*/
-
-
-h2{
-
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.322); /* Fundo semitransparente */
-    display: flex; /* Torna o contêiner visível e permite centralização com Flexbox */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-    flex-direction: column; /* Organiza os filhos em coluna */
-    position: fixed; /* Fixa o contêiner na tela */
-    top: 0;
-    left: 0;
-    z-index: 2; /* Garante que o elemento esteja acima de outros */
-    
-}
-  
 
 #clouds{
-    width: 900px; /* Largura do botão */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    position: absolute; /* Permite posicionar o botão livremente */
-    top:50%; /* Centraliza verticalmente */
-    left: 100%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
-    border: none; /* Remove a borda padrão */
-    
-    z-index: 2; /* Garante que o botão fique acima de outros elementos */
+    width: 500px; 
+    height: auto; 
+    position: absolute; /
+    top: calc(50% - 250px); 
+    border: none; 
+    z-index: 2; 
+    animation: 20s linear infinite move-across;
+}
+
+@keyframes move-across {
+    from {
+        transform: translateX(100vw)
+    }
+
+    to {
+        transform: translateX(-900px)
+    }
 }
 
 #rock-meteor{
-    width: 200px; /* Largura do botão */
+    width: 100px; /* Largura do botão */
     height: auto; /* Ajusta a altura proporcionalmente */
-    position: relative; /* Permite posicionar o botão livremente */
+    position: absolute; /* Permite posicionar o botão livremente */
     top:50%; /* Centraliza verticalmente */
     left: 100%; /* Centraliza horizontalmente */
     transform: translate(-90%, -20%); /* Ajusta para o centro exato */
@@ -90,38 +74,20 @@ h2{
     z-index: 2; /* Garante que o botão fique acima de outros elementos */
 }
 
-#fire-man{
-    
-    width: 500px; 
-
-    position: absolute; 
-    
-    left: 80%; 
-    transform: translate(-50%, -50%); 
-
-    z-index: 10;
+#spiderman{
+    position: absolute;
 }
 
-#bat-element{
-   
-    width: 250px;
+.web {
+    position: absolute;
+    background: white;
+    color: red;
+    font-size: 12px;
 }
 
+#ball-element{
+    position: absolute;
+    z-index: 2; /* Garante que o botão fique acima de outros elementos */
 
-body{
-    font-size: 50px;
-    color: #fff;
-    padding: 20px 40px;
-    border: 0;
-    box-shadow: 0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-   
+}
 
-    #main{
-        padding: 5rem;
-        font-family: Helvetica, Arial;
-        font-size: 2vw;
-      
-      }
