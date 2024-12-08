@@ -11,83 +11,60 @@
 
 <body>
 
-   
-
     <main>
 
-       
+        <div id="startScreen">
+            <button id="start" tabindex="3">Start</button>
+            <button id="instructions" tabindex="2">Instructions</button>
+            <input id="your-name" placeholder="Type your name here" tabindex="1" />
+
+            <article id="help" class="hidden">
+
+                <h4>Game Instructions</h4>
+                <hr>
+                <p>Objective: Accumulate points by shooting at obstacles and overcome challenges without touching them.</p>
+
+                <hr>
+                <p>Controls:
+
+                Use the arrow keys to move up, down, and sideways.
+                    Press the spacebar to jump.
+                    Press Enter to shoot.</p>
+
+                <hr> Tip: Stay focused and avoid collisions to maximize your score.
+
+                <hr>
+                Good luck!
+            </article>
+        </div>
+
 
         <div id="game-container">
 
-            <img id="clouds" src="img/cloud.png" alt="cloud"> 
+            <div id="points-element">Score: <span id="points">0</span></div>
+
+            <img id="clouds" src="img/cloud.png" alt="cloud">
 
             <img id="rock-meteor" src="img/element2.png" alt="Meteor">
 
-            <img id="spiderman" src="img/spider-man.png" alt="Spider Man">
+            <img id="spiderman" src="img/spidermannew.png" alt="Spider Man">
 
-            <div>
-                <img id="ball-element" src="img/ballgreen.png" alt="Green ball">
-                
-            </div>
-            
+            <img id="bat1" class="hidden" src="img/bat.png" alt="Bat">
+            <img id="bat2" class="hidden" src="img/bat.png" alt="Bat">
 
-            
-             
-
-
-            <div id="background-image">
-                
-            </div>
-
-            
+            <img id="ball-element" src="img/ballgreen.png" alt="Green ball">
 
         </div>
 
 
         <div id="endScreen">
-            
-            <h1>Game Over</h1>
             <button id="restart">Restart</button>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
 
-  
-
-
-       
-    
-
-
-
-
-
-
-
-
-
-
     <script src="src/script.js"></script>
-    <script type="text/javascript" src="src/player.js"></script>
- 
-    
+   
+
 </body>
 </html>
-
-
-
-
- 
